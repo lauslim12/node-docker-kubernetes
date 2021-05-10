@@ -1,3 +1,7 @@
+/**
+ * Filter function to remove any unwanted key-value pairs in an object.
+ * Reference: https://stackoverflow.com/a/66639897/13980107 (my answer on StackOverflow).
+ */
 const filterObject = (obj, ...allowedFields) => {
   const newObject = {};
 
