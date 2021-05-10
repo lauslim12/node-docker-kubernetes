@@ -1,0 +1,64 @@
+[
+  {
+    "fullName": "Sayu Ogiwara",
+    "address": "Hokkaido, Japan",
+    "username": "sayu",
+    "password": "123",
+    "role": "admin"
+  },
+  {
+    "_id": "6096977a8f5ffb1e504e74b6",
+    "fullName": "Chizuru Ichinose",
+    "address": "Tokyo, Japan",
+    "username": "chizuru",
+    "password": "123"
+  },
+  {
+    "fullName": "Asagi Aiba",
+    "address": "Kyoto, Japan",
+    "username": "asagi",
+    "password": "123"
+  },
+  {
+    "fullName": "Rin Tohsaka",
+    "address": "Kobe, Japan",
+    "username": "rin",
+    "password": "123"
+  },
+  {
+    "fullName": "Mai Sakurajima",
+    "address": "Fujisawa, Japan",
+    "username": "mai",
+    "password": "123"
+  },
+  {
+    "fullName": "Aki Adagaki",
+    "address": "Fukuoka, Japan",
+    "username": "aki",
+    "password": "123"
+  },
+  {
+    "fullName": "Asuna Yuuki",
+    "address": "Shinagawa, Japan",
+    "username": "asuna",
+    "password": "123"
+  },
+  {
+    "fullName": "Ruka Sarashina",
+    "address": "Gotenba, Japan",
+    "username": "ruka",
+    "password": "123"
+  },
+  {
+    "fullName": "Miyuki Shiba",
+    "address": "Nagano, Japan",
+    "username": "miyuki",
+    "password": "123"
+  },
+  {
+    "fullName": "Fumino Furuhashi",
+    "address": "Niigata, Japan",
+    "username": "fumino",
+    "password": "123"
+  }
+]
