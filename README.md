@@ -49,6 +49,12 @@ mv .env.example .env
 nano .env
 ```
 
+Migrate the sample data first.
+
+```bash
+npm run migrate
+```
+
 Run the application in development mode.
 
 ```bash
