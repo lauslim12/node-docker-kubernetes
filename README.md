@@ -67,6 +67,13 @@ If you want to run the application in production mode.
 npm start
 ```
 
+If you want to test with an administrator account, you can login with the following credentials:
+
+```bash
+username: sayu
+password: 123
+```
+
 Check for the API documentation in Postman.
 
 ## Deployment
