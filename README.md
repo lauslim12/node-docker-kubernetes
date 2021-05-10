@@ -4,7 +4,8 @@ Sample application to demonstrate how to implement a simple API with Node.js, Do
 
 ## Requirements
 
-- Node.js version 14
+- Node.js version 14 and up
+- NPM version 6 and up
 - MongoDB (I use MongoDB Atlas)
 - Docker
 - Kubernetes (I use `Minikube` to deploy the app locally)
@@ -33,7 +34,7 @@ To install the application, do the following steps.
 Clone the repository.
 
 ```bash
-git clone
+git clone https://github.com/lauslim12/node-docker-kubernetes.git
 ```
 
 Install the application.
@@ -74,7 +75,7 @@ username: sayu
 password: 123
 ```
 
-Check for the API documentation in Postman.
+Check for the API documentation in Postman. **Make sure to use the production environment in Postman!**
 
 ## Deployment
 
