@@ -1,8 +1,8 @@
-/** The create function is located at 'authController.js', not this file. **/
 const bcrypt = require('bcrypt');
 const AppError = require('../utils/AppError');
 const asyncHandler = require('../utils/asyncHandler');
 const User = require('../models/userModel');
+const filterObject = require('../utils/filterObject');
 
 /**
  * Gets all of the users in the database.
@@ -77,10 +77,15 @@ exports.register = asyncHandler(async (req, res, next) => {
  * Updates a single user in the database.
  * Takes a single parameter: ':/id' and the request body.
  * If the password is changed, hash it first before storing it.
+ * Don't forget to prevent '_id' updates.
  */
 exports.updateUser = asyncHandler(async (req, res, next) => {
   if (req.body.password) {
     req.body.password = await bcrypt(req.body.password, 12);
+  }
+
+  if (req.body._id) {
+    req.body = filterObject(req.body, '_id');
   }
 
   const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
