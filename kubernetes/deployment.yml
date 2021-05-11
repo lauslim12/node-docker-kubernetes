@@ -9,14 +9,16 @@ spec:
   selector:
     matchLabels:
       app: ndk
-    template:
-      metadata:
-        labels:
-          app: ndk
-      spec:
-        containers:
-          - name: ndk
-            image: lauslim12/node-docker-kubernetes
-            imagePullPolicy: Always
-            ports:
-              - containerPort: 3000
+  template:
+    metadata:
+      labels:
+        app: ndk
+    spec:
+      containers:
+        - name: ndk
+          image: lauslim12/node-docker-kubernetes:1.0.0
+          envFrom:
+            - secretRef:
+                name: prod-secrets
+          ports:
+            - containerPort: 3000
