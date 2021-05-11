@@ -1,10 +1,12 @@
 # Node Docker Kubernetes
 
-Sample application to demonstrate how to implement a simple API with Node.js, Docker, and Kubernetes.
+Sample application to demonstrate how to implement a simple API with Node.js, Docker, and Kubernetes. This application is live in case you want to test things out.
 
-## API Documentation
+## Useful Links
 
-API documentation is available [here]().
+- [API Documentation](https://documenter.getpostman.com/view/15712851/TzRSfSqD) in Postman is available here.
+- [Click me](https://ndk-api.herokuapp.com/) to access the live version of the API. Be warned as this is deployed on Heroku, there is no Kubernetes / GKE at play here. I intentionally made this so people can test things out faster.
+- [DockerHub](https://hub.docker.com/r/lauslim12/node-docker-kubernetes) to access the docker image repository.
 
 ## Requirements
 
@@ -13,7 +15,7 @@ API documentation is available [here]().
 - MongoDB (I use MongoDB Atlas)
 - Docker
 - Kubernetes (I use `Minikube` to deploy the app locally)
-- Postman (at least the User Agent if you want to test the API route without using `curl`)
+- Postman (at least the Desktop User Agent if you want to test the API route without using `curl`)
 
 ## Features
 
@@ -79,7 +81,7 @@ username: sayu
 password: 123
 ```
 
-Check for the [API documentation]() in Postman. **Make sure to use the production environment in Postman!**
+Check for the API documentation in Postman. **Make sure to use the production or development environment in Postman!**
 
 ## Deployment
 
@@ -146,7 +148,7 @@ Generate Kubernetes secret file first, so that we can use our environment variab
 kubectl create secret generic prod-secrets --from-env-file=.env
 ```
 
-Run Kubernetes deployment scripts.
+Run Kubernetes deployment scripts. To be warned, I set the `kubernetes/deployment.yml` file to pull from my Docker Hub. You might need to make your own adjustments if you want to use your own image.
 
 ```bash
 kubectl apply -f kubernetes
