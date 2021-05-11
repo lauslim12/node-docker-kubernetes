@@ -179,3 +179,11 @@ Clean up your application and stop Minikube.
 kubectl delete -f kubernetes
 minikube stop
 ```
+
+## Development
+
+Don't forget to run the linters to make the code better!
+
+```bash
+npm run lint
+```
