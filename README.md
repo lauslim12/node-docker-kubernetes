@@ -161,7 +161,7 @@ minikube service ndk --url
 Scale infinitely.
 
 ```bash
-kubectl scale --replicas=10 deployment/ndk
+kubectl scale --replicas=10 deployment.apps/node-docker-kubernetes-deployment
 kubectl get pods -l app=ndk --watch
 ```
 
