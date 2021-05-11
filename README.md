@@ -134,10 +134,10 @@ docker-compose up
 
 Then, after creating our Docker image, we will scale it infinitely with Kubernetes.
 
-Start Minikube.
+Start Minikube (Best practice is to use Docker as the virtual machine).
 
 ```bash
-minikube start --vm # in my case, I had to add '--no-vtx-check' in order to start the minikube instance (my device does not support parallel virtualizations).
+minikube start --docker
 ```
 
 Generate Kubernetes secret file first, so that we can use our environment variables from the `.env` file.
