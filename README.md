@@ -2,6 +2,10 @@
 
 Sample application to demonstrate how to implement a simple API with Node.js, Docker, and Kubernetes.
 
+## API Documentation
+
+API documentation is available [here]().
+
 ## Requirements
 
 - Node.js version 14 and up
@@ -75,7 +79,7 @@ username: sayu
 password: 123
 ```
 
-Check for the API documentation in Postman. **Make sure to use the production environment in Postman!**
+Check for the [API documentation]() in Postman. **Make sure to use the production environment in Postman!**
 
 ## Deployment
 
@@ -84,7 +88,7 @@ We will deploy the application on Docker so it could be deterministic.
 Containerize the application first.
 
 ```bash
-docker build . -t lauslim12/node-docker-kubernetes
+docker build . -t node-docker-kubernetes
 ```
 
 Check if it has been successfully built.
@@ -96,7 +100,7 @@ docker images
 Test the application locally. The `ndk` stands for `node-docker-kubernetes`.
 
 ```bash
-docker run -it --name ndk -p 3000:3000 --env-file=./.env lauslim12/node-docker-kubernetes
+docker run -it --name ndk -p 3000:3000 --env-file=./.env node-docker-kubernetes
 ```
 
 List your application in your local machine.
@@ -105,7 +109,20 @@ List your application in your local machine.
 docker ps
 ```
 
+Stop Docker after you have finished testing.
+
+```bash
+docker stop
+docker rm
+```
+
 Note that you might need to also deploy your MongoDB to Kubernetes and Docker if you are using this locally. Because I use MongoDB Atlas (cloud database-as-a-service), I don't deploy it in this repository.
+
+By the way, I have already deployed this Docker image on my Docker Hub. If you're too lazy to create it, feel free to just pull it from my Docker Hub and test it on your local machine.
+
+```bash
+docker pull lauslim12/node-docker-kubernetes
+```
 
 ## Scaling
 
@@ -114,7 +131,13 @@ Then, after creating our Docker image, we will scale it infinitely with Kubernet
 Start Minikube.
 
 ```bash
-minikube start --vm
+minikube start --vm # in my case, I had to add '--no-vtx-check' in order to start the minikube instance (my device does not support parallel virtualizations).
+```
+
+Generate Kubernetes secret file first, so that we can use our environment variables from the `.env` file.
+
+```bash
+kubectl create secret generic prod-secrets --from-env-file=.env
 ```
 
 Run Kubernetes deployment scripts.
