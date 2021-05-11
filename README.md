@@ -25,7 +25,7 @@ This is a bare API that is equipped with several features.
 - An administrator can perform CRUD operations on each users. Passwords are encrypted with asynchronous BCRYPT.
 - A user can only see their own profile.
 - Code is documented properly and according to JSDoc's minimum standards.
-- Application is documented properly (diagrams and Postman API documentation exist for quick skimming).
+- Application is documented properly (diagram and Postman API documentation exist for quick skimming).
 
 ## Use Case
 
@@ -120,7 +120,7 @@ docker rm
 
 Note that you might need to also deploy your MongoDB to Kubernetes and Docker if you are using this locally. Because I use MongoDB Atlas (cloud database-as-a-service), I don't deploy it in this repository.
 
-By the way, I have already deployed this Docker image on my Docker Hub. If you're too lazy to create it, feel free to just pull it from my Docker Hub and test it on your local machine.
+By the way, I have already deployed this Docker image on my Docker Hub. Feel free to just pull it from my Docker Hub and test it on your local machine.
 
 ```bash
 docker pull lauslim12/node-docker-kubernetes
