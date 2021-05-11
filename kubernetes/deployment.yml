@@ -14,6 +14,7 @@ spec:
       labels:
         app: ndk
     spec:
+      dnsPolicy: Default
       containers:
         - name: ndk
           image: lauslim12/node-docker-kubernetes:1.0.0
