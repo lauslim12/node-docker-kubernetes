@@ -65,7 +65,7 @@ exports.register = asyncHandler(async (req, res, next) => {
 
   newUser.password = undefined;
 
-  res.status(200).json({
+  res.status(201).json({
     status: 'success',
     data: {
       data: newUser,
