@@ -1,6 +1,6 @@
 {
   "name": "node-docker-kubernetes",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Explains how to deploy a simple API with Docker and Kubernetes",
   "main": "src/server.js",
   "private": true,
