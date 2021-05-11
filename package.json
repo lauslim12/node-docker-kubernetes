@@ -2,10 +2,10 @@
   "name": "node-docker-kubernetes",
   "version": "0.0.0",
   "description": "Explains how to deploy a simple API with Docker and Kubernetes",
-  "main": "server.js",
+  "main": "src/server.js",
   "private": true,
   "scripts": {
-    "migrate": "cd db && node migrate --delete && node migrate --import",
+    "migrate": "node db/migrate --delete && node db/migrate --import",
     "eslint-check": "npx eslint . --ext .js",
     "format-check": "prettier --check --config ./.prettierrc ./**/*.js",
     "lint": "npm run format-check && npm run eslint-check",

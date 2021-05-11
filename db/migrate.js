@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const User = require('../src/models/userModel');
 
 // Configurations
-dotenv.config({ path: '../.env' });
+dotenv.config({ path: `${__dirname}/../.env` });
 
 // Database
 mongoose
