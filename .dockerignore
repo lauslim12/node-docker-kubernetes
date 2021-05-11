@@ -1,4 +1,4 @@
 .git
-.architecture
-.env
+architecture
 node_modules
+.env

@@ -10,9 +10,6 @@ COPY package*.json ./
 # Install our application.
 RUN npm ci --only=production
 
-# Run migrations.
-RUN npm run migrate
-
 # Copy our installed API to our working directory.
 COPY . ./
 
