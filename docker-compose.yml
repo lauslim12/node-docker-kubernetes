@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.compose
+    env_file: .env
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE=$DATABASE
+      - JWT_SECRET=$JWT_SECRET
+      - JWT_EXPIRES_IN=$JWT_EXPIRES_IN
+      - JWT_COOKIES_EXPIRES_IN=$JWT_COOKIE_EXPIRES_IN
+    volumes:
+      - .:/application
+      - /application/node_modules
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    command: npm start

@@ -124,6 +124,12 @@ By the way, I have already deployed this Docker image on my Docker Hub. If you'r
 docker pull lauslim12/node-docker-kubernetes
 ```
 
+Another alternative, you can use `docker-compose`.
+
+```bash
+docker-compose up
+```
+
 ## Scaling
 
 Then, after creating our Docker image, we will scale it infinitely with Kubernetes.
