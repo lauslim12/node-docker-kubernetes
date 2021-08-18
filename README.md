@@ -5,7 +5,6 @@ Sample application to demonstrate how to implement a simple API with Node.js, Do
 ## Useful Links
 
 - [API Documentation](https://documenter.getpostman.com/view/15712851/TzRSfSqD) in Postman is available here.
-- [Click me](https://ndk-api.herokuapp.com/) to access the live version of the API. Be warned as this is deployed on Heroku, there is no Kubernetes / GKE at play here. You have to deploy it manually according to my instructions below to use the Kubernetes. I intentionally made this so people can test things out faster.
 - [DockerHub](https://hub.docker.com/r/lauslim12/node-docker-kubernetes) to access the docker image repository.
 
 ## Requirements
